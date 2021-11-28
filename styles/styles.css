@@ -73,8 +73,11 @@ h2 {
 .waving-emoji {
     transform-origin: 70% 70%;
 }
-.status:hover .waving-emoji, .status:active .waving-emoji {
-    animation: waving 1.7s 2;
+.hello-waving {
+    animation: waving 1.7s 1s 1;
+}
+.waving-animation {
+    animation: waving 1.7s 1;
 }
 @keyframes waving {
     0% { transform: rotate( 0.0deg) }
