@@ -2,10 +2,10 @@ $(".waving-emoji").bind("webkitAnimationEnd mozAnimationEnd animationend", funct
     $(this).removeClass("waving-animation hello-waving")
 })
   
-$(".waving-emoji").hover(function(){
-    $(this).addClass("waving-animation");        
+$(".status").hover(function(){
+    $(".waving-emoji").addClass("waving-animation");        
 })
 
-$(".waving-emoji").click(function(){
-    $(this).addClass("waving-animation");        
+$(".status").click(function(){
+    $(".waving-emoji").addClass("waving-animation");        
 })
