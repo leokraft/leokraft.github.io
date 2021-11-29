@@ -127,7 +127,7 @@ h2 {
         height: 1400px;
         background: var(--main-bg-color);
         border-radius: 62% 47% 82% 35% / 45% 45% 80% 66%;
-        will-change: border-radius, transform, opacity;
+        will-change: border-radius, transform !important, opacity;
         animation: sliderShape 30s linear infinite;
         display: block;
         z-index: -1;
