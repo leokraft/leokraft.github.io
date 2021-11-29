@@ -1,11 +1,16 @@
-$(".waving-emoji").bind("webkitAnimationEnd mozAnimationEnd animationend", function(){
+let wavingElem = $(".waving-emoji")
+let statusContainer = $(".status")
+
+wavingElem.bind("webkitAnimationEnd mozAnimationEnd animationend", function(){
     $(this).removeClass("waving-animation hello-waving")
 })
-  
-$(".status").hover(function(){
-    $(".waving-emoji").addClass("waving-animation");        
-})
 
-$(".status").click(function(){
-    $(".waving-emoji").addClass("waving-animation");        
-})
+let waving = function(){
+    
+    if (!wavingElem.hasClass("hello-waving")) {
+        wavingElem.addClass("waving-animation");  
+    }
+}
+  
+statusContainer.hover(waving)
+statusContainer.click(waving)
