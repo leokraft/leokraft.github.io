@@ -1,16 +1,23 @@
-let wavingElem = $(".waving-emoji")
-let statusContainer = $(".status")
+const wavingElem = document.querySelector('.waving-emoji')
+const statusContainer = document.querySelector('.status')
 
-wavingElem.bind("webkitAnimationEnd mozAnimationEnd animationend", function(){
-    $(this).removeClass("waving-animation hello-waving")
-})
+const helloWavingClass = "hello-waving"
+const wavingClass = "waving-animation"
 
-let waving = function(){
+const animationReset = function(e){
+    e.target.classList.remove(wavingClass, helloWavingClass)
+}
+
+wavingElem.addEventListener("webkitAnimationEnd", animationReset)
+wavingElem.addEventListener("mozAnimationEnd", animationReset)
+wavingElem.addEventListener("animationend", animationReset)
+
+const waving = function(){
     
-    if (!wavingElem.hasClass("hello-waving")) {
-        wavingElem.addClass("waving-animation");  
+    if (!wavingElem.classList.contains(helloWavingClass)) {
+        wavingElem.classList.add(wavingClass);
     }
 }
   
-statusContainer.hover(waving)
-statusContainer.click(waving)
+statusContainer.addEventListener("mouseenter", waving)
+statusContainer.addEventListener("click", waving)
