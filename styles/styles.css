@@ -74,9 +74,11 @@ h2 {
     transform-origin: 70% 70%;
 }
 .hello-waving {
+    will-change: transform;
     animation: waving 1.7s 1s 1;
 }
 .waving-animation {
+    will-change: transform;
     animation: waving 1.7s 1;
 }
 @keyframes waving {
